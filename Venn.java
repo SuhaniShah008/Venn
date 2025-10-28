@@ -1,31 +1,37 @@
-import java.util.*;
-public class Venn{
+import java.util.HashSet;
+import java.util.Set;
 
-	private static String bat= "hello there friends";
-	private static String cat= "hi there calm";
-	private static String oneWord;
+public class VennSet {
+    public static void main(String[] args) {
+        Set<String> setA = new HashSet<>();
+        Set<String> setB = new HashSet<>();
 
+        // Sample data
+        setA.add("apple");
+        setA.add("banana");
+        setA.add("cherry");
 
+        setB.add("banana");
+        setB.add("cherry");
+        setB.add("date");
+        setB.add("fig");
 
+        // Find intersection (duplicates)
+        Set<String> intersection = new HashSet<>(setA);
+        intersection.retainAll(setB);
 
+        // Unique to A
+        Set<String> onlyA = new HashSet<>(setA);
+        onlyA.removeAll(setB);
 
-	public static void main(String[] args){
+        // Unique to B
+        Set<String> onlyB = new HashSet<>(setB);
+        onlyB.removeAll(setA);
 
-		Set<String> uniques = new HashSet<String>();
-        Set<String> dups    = new HashSet<String>();
-      
-       	oneWord=  bat+cat;
-       	for(String firstRecord : uniques){
-       		uniques.add(oneWord);
-            // comparing logic
-        	}
-    	}
-            
-
-
-        System.out.println("Duplicate words: " + dups);
-
-
+        System.out.println("Set A: " + setA);
+        System.out.println("Set B: " + setB);
+        System.out.println("Duplicates (Intersection): " + intersection);
+        System.out.println("Only in A: " + onlyA);
+        System.out.println("Only in B: " + onlyB);
     }
-
 }
