@@ -1,8 +1,8 @@
-# 🔁 Java Set Duplicate Finder (Venn Diagram Concept)
+# Java Set Duplicate Finder (Venn Diagram Concept)
 
 This is a simple **Java** program that uses `HashSet` to compare two sets of elements and identify **duplicates (intersections)**. It represents the foundational logic behind a **Venn diagram**, focusing on set operations.
 
-## 🧠 What It Does
+## What It Does
 
 - Takes two sets of items (e.g., strings or integers)
 - Uses `HashSet` to:
@@ -14,7 +14,7 @@ This is a simple **Java** program that uses `HashSet` to compare two sets of ele
 
 > Note: No graphics are used yet, but the output mimics Venn diagram set logic.
 
-## 📄 Sample Code
+## Sample Code
 
 ```java
 import java.util.HashSet;
